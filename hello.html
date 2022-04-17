@@ -9,76 +9,71 @@
 </head>
 
 <body>
-    <form action="#" method="post" enctype="">
+    <form action="" method="get">
         <div>
-            <!--атрибут placeholder= подпись поля, мы его видем, но оно не отправится на сервер. Т.К начав что-то водить оно испарится-->
-            <input type="text" placeholder="подпись" name="username" disabled value="">
-        </div>
-        <div>
-            <input type="password" name="userpass" value="user">
-        </div>
-        <div>
-            <p><input checked type="radio" name="beer" value="lager"> Cветлое пиво </p>
-            <input type="radio" name="beer" value="dark"> Темное пиво </p>
+            <p> ИМЯ</p>
+            <input tabindex="1" name="name" placeholder="name" type="text">
         </div>
         <br>
-        <div>
-            <p><input type="radio" name="beer2" value="lager"> Cветлое пиво </p>
-            <input checked type="radio" name="beer2" value="dark"> Темное пиво </p>
-        </div>
-        <div>
-            <p><input type="checkbox" name="car" value="yes">наличие авто</p>
 
-            <p><input type="checkbox" name="car2" value="yes">наличие авто2</p>
+        <div>
+            <p>Пароль </p>
+            <input tabindex="2" name="pass" placeholder="введите свой телефон" type="password">
+        </div>
+        <br>
 
-            <p><input type="checkbox" name="car3" value="yes">наличие авто3</p>
+        <div>
+            <p>Телефон</p>
+            <input tabindex="3" name="tel" type="tel">
+        </div>
+        <br>
 
-            <p><input checked type="checkbox" name="car4" value="yes">наличие авто4</p>
+        <div>
+            <p>Пол</p>
+            <input tabindex="4" name="gen" type="radio" value="male" checked> Мужской
+            <p><input tabindex="4" name="gen" type="radio" value="female"> Женский </p>
         </div>
         <br>
+
+        <p>Имущество</p>
         <div>
-            <p><input type="file" name="foto" /></p>
+            <input tabindex="5" type="checkbox" name="bike" value="yes" checked>Велик
+        </div>
+
+        <div>
+            <input tabindex="6" type="checkbox" name="car" value="yes">машина
+        </div>
+
+        <div>
+            <input tabindex="7" type="checkbox" name="house" value="yes" disabled>Дом
         </div>
         <br>
-        <br>
+
+        <p>Доп.Инфа</p>
         <div>
-            <textarea tabindex="2" disabled name="text1"></textarea>
+            <textarea tabindex="8" name="tex"> </textarea>
         </div>
+
         <div>
-            <!-- Выпадающий список. option- пункт списка  -->
-            <select name="color">
-                <option value="red">Красный
-                </option>
-                <!-- selected - выбор по умолчанию -->
-                <option selected value="green">Зеленый</option>
-                <option value="green2">Зеленый2</option>
+            <p>Прикрепить фото</p>
+            <input tabindex="9" type="file">
+        </div>
+        <br>
+
+        <div>
+            <p>Любимый цвет </p>
+            <select tabindex="10" name="список">
+                <option value="red"> Красный </option>
+                <option value="blue"> Голубой </option>
+                <option value="green"> Зеленый </option>
             </select>
         </div>
 
-        <!-- Кнопка. в атрибуте пишем 2 значения 1- submit (отправить всю форму) или  reset - отчистка формы (отчистит всю форму)-->
         <div>
-            <button tabindex="1" type="submit">отправить</button>
+            <p> Действия </p>
+            <button tabindex="11" type="submit">Отправить</button>
+            <button tabindex="12" type="reset">Сбросить</button>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </form>
 </body>
 
