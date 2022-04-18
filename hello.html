@@ -11,68 +11,61 @@
 <body>
     <form action="" method="get">
         <div>
-            <p> ИМЯ</p>
-            <input tabindex="1" name="name" placeholder="name" type="text">
+            <p>Имя <input tabindex="1" name="name" type="text"> </p>
         </div>
         <br>
 
         <div>
-            <p>Пароль </p>
-            <input tabindex="2" name="pass" placeholder="введите свой телефон" type="password">
+            <p>Пароль</p>
+            <input tabindex="2" type="text" name="passsword" placeholder="введите свой пароль">
         </div>
         <br>
 
         <div>
             <p>Телефон</p>
-            <input tabindex="3" name="tel" type="tel">
+            <input tabindex="3" type="tel" name="tel" placeholder="введите телефон">
+        </div>
+        <br>
+
+        <div> <input tabindex="4" type="file" name="fel">
         </div>
         <br>
 
         <div>
-            <p>Пол</p>
-            <input tabindex="4" name="gen" type="radio" value="male" checked> Мужской
-            <p><input tabindex="4" name="gen" type="radio" value="female"> Женский </p>
+            <p>Ваша машина</p>
+            <input tabindex="5" type="radio" name="car" value="green"> Зеленый
         </div>
+        <input tabindex="5" type="radio" name="car" value="red"> Красный </div>
         <br>
+
+
+
+
 
         <p>Имущество</p>
         <div>
-            <input tabindex="5" type="checkbox" name="bike" value="yes" checked>Велик
+            <input tabindex="6" type="checkbox" name="house" value="yes" checked> Дом
         </div>
-
         <div>
-            <input tabindex="6" type="checkbox" name="car" value="yes">машина
+            <input tabindex="7" type="checkbox" name="home 2" value="yes"> Дача
         </div>
-
         <div>
-            <input tabindex="7" type="checkbox" name="house" value="yes" disabled>Дом
-        </div>
-        <br>
-
-        <p>Доп.Инфа</p>
-        <div>
-            <textarea tabindex="8" name="tex"> </textarea>
-        </div>
-
-        <div>
-            <p>Прикрепить фото</p>
-            <input tabindex="9" type="file">
+            <input tabindex="8" type="checkbox" name="car" value="yes"> Машина
         </div>
         <br>
 
         <div>
-            <p>Любимый цвет </p>
-            <select tabindex="10" name="список">
-                <option value="red"> Красный </option>
-                <option value="blue"> Голубой </option>
-                <option value="green"> Зеленый </option>
+            <p>Доп. Инфа</p>
+            <textarea tabindex="9" name="text" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+            <p> Любимый цвет </p>
+            <select tabindex="10" name="список" id="">
+                <option value="dark">Черный </option>
+                <option value="green">Зеленый </option>
+                <option value="blue" disabled>Голубой</option>
             </select>
-        </div>
-
-        <div>
-            <p> Действия </p>
-            <button tabindex="11" type="submit">Отправить</button>
-            <button tabindex="12" type="reset">Сбросить</button>
         </div>
     </form>
 </body>
