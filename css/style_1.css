@@ -95,101 +95,81 @@ h6 {
    font-weight: 400;
 }
 
-.block {
-   color: blue;
-}
-
 /* ............................................................ */
 
 
-
-/* новый шрифт */
-.arial {
+/* Добовляем новый шрифт */
+body {
    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-/* размер шрифта 30  */
-.fontsize30 {
+h1 {
+   color: #445161;
    font-size: 30px;
 }
 
-/* курсив текта */
-.italic {
-   font-style: italic;
+h2 {
+   color: #445161;
+   font-size: 25px;
 }
 
-/* font-weight - устанавливает насыщенность шрифта (по умолчанию 400)  */
-.font700 {
-   font-weight: 700;
+
+.text {
+   color: #333333;
+   line-height: 25px;
 }
 
-/* установка цвета*/
-.colorred {
-   color: #a52a2a;
+.bold {
+   color: #333333;
+   font-weight: bold;
 }
 
-/* установка положения текста на странице (по правому) */
-.textright {
+.Redd {
+   color: red;
+}
+
+h3 {
+   color: #445161;
+   font-size: 20px;
+}
+
+.text_right {
+   color: #333333;
    text-align: right;
 }
 
-/* подчеркивает текст снизу */
-.decoration {
+.capslock {
+   color: #333333;
+   text-transform: uppercase;
+}
+
+.italics_1 {
+   font-style: italic;
+}
+
+.emphasize {
    text-decoration: underline;
 }
 
-/* подчеркивает текст сверху */
-.decoration2 {
-   text-decoration: overline;
+.text_centr {
+   text-align: center;
 }
 
-/* зачеркивает текст */
+.text_big {
+   color: #333333;
+   font-size: 24px;
+}
+
 .decoration3 {
    text-decoration: line-through;
 }
 
+.wd {
+   font-family: 'Times New Roman', Times, serif;
+   word-spacing: 15px;
+   color: #333333;
+}
 
-/* Добавляет тень к тексту 
-1 (0рх)- смещение по горизонтали.  
-2 (0рх)- смещение по вертикали
-3 (0рх)- размер размытия тени
-4 цвет */
 .shadow {
-   text-shadow: 1px 1px 10px #633232;
-}
-
-/* Заглавные или прописные символы
-1."capitalize" - В каждом новом слове первая буква заглавная.
-2.lowercase - все символы в нижнем регистре. 
-3.uppercase- все символы в верхнем  регистре.
-4. none -возрощает текст к обычному состоянию */
-.uppercase {
-   text-transform: uppercase;
-}
-
-/* Красная строка*/
-.ident {
-   text-indent: 50px;
-}
-
-/* интервал между символами/буквами*/
-.ispace {
-   letter-spacing: 5px;
-}
-
-/* интервал между словами*/
-.wspace {
-   word-spacing: 5px;
-}
-
-/*управляет пробелами между словами
-1.nowrap - горизонтальная прокрутка 
-2. normal - отмена   */
-.witespace {
-   white-space: nowrap;
-}
-
-/*Межстрочный интервал текста */
-.lineheight {
-   line-height: 35px;
+   text-shadow: 5px 2px 2px #445161;
 }
