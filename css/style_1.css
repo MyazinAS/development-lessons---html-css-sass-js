@@ -96,67 +96,16 @@ h6 {
 }
 
 /* ............................................................ */
+
+
+
 body {
-   font-family: Arial, Helvetica, sans-serif;
+   padding: 30px
 }
 
-div {
-   border: 1px solid #000;
-}
-
-.text_heig {
-   line-height: 25px;
-   margin: 50px 200px 0px 50px;
-}
-
-
-.sptx {
-   display: block;
-   margin: 25px 0px 0px 50px;
-}
-
-.foto {
-   display: block;
-   margin: 0px 0px 0px 83px;
-}
-
-.nottheend {
-   margin: 25px 0px 50px 50px;
-   min-width: 150%;
-}
-
-.sm {
-   display: inline;
-   margin: 0px 25px 0px 50px;
-   width: 175px;
-}
-
-.sm2 {
-   display: inline;
-   border: 1px solid #000;
-}
-
-.sp {
-   border: 1px solid #000;
-   margin: 50px 25px 0px 50px;
-   width: 350px;
-
-}
-
-.foto2 {
-   border: 1px solid #000;
-   margin: 0px 0px 0px 50px;
-
-}
-
-.help {
-   border: rgb(255, 255, 255);
-   margin: 50px 2px;
-}
-
-.bloc {
-   display: block;
-   margin: 0px 0px 0px 50px;
-   border: solid #000;
-   width: 300px;
+.block {
+   height: 300px;
+   border-radius: 15px;
+   box-shadow: 0px 0px 10px #000;
+   background: url('/img/bg.jpg') center no-repeat fixed;
 }
