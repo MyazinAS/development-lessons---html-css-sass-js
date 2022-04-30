@@ -54,6 +54,12 @@ textarea {
    font-family: inherit;
 }
 
+
+
+/*
+Задаёт стиль кнопки для очистки текстового поля. Исходно эта кнопка не видна,
+она появляется в правой части поля только при вводе текста.
+Только IE */
 input::-ms-clear {
    display: none;
 }
@@ -62,6 +68,10 @@ button {
    cursor: pointer;
 }
 
+
+
+/*Задаёт стиль внутренней части элемента
+Только FireFox*/
 button::-moz-focus-inner {
    padding: 0;
    border: 0;
@@ -99,117 +109,29 @@ h6 {
 
 body {
    background-color: #e8e8e8;
-}
-
-.content {
-   max-width: 841px;
-   margin: 0 auto;
-   padding: 125px 0px 137px 0px;
+   padding: 30px;
    font-family: Arial, Helvetica, sans-serif;
-}
 
-.p_1 {
-   text-transform: uppercase;
-   font-size: 14px;
 }
 
 .list {
-   padding: 30px 0px 0px 0px;
-
+   font-size: 18px;
 }
 
 
-
-.list-1 {
-   padding: 0px 0px 40px 0px;
-}
-
-.list-1 li {
-   background: url('/img/check\ icon.png') 10px no-repeat;
+.list li {
    margin: 0px 0px 10px 0px;
-   padding: 2px 2px 2px 40px;
+   position: relative;
+   padding: 0px 0px 0px 30px;
 }
 
-.list-1 li:nth-child(1) {
-   text-decoration: line-through;
+.list li:before {
+   content: '';
+   width: 25px;
+   height: 20px;
+   position: absolute;
+   top: 2px;
+   left: 0px;
+   background: url("/img/check\ icon.png") 0px 0px no-repeat;
 
-}
-
-.list-1 li:nth-child(2) {
-   font-weight: 700;
-}
-
-.list-1 li:nth-child(3) {
-   font-style: oblique;
-}
-
-.list-1 li:nth-child(4) {
-   text-transform: uppercase;
-}
-
-
-.list-2 li {
-   background: url('/img/check\ icon.png') 10px no-repeat;
-   margin: 0px 0px 10px 0px;
-   padding: 2px 2px 2px 40px;
-}
-
-.list-2 li:nth-child(2):hover {
-   color: red;
-}
-
-.middle {
-   margin: 100px 0px 0px 0px;
-}
-
-.but {
-   height: 40px;
-   line-height: 40px;
-   display: inline-block;
-   background-color: #80b7b3;
-   padding: 0 30px;
-   border-radius: 20px;
-
-}
-
-.but:hover {
-   height: 40px;
-   line-height: 40px;
-   display: inline-block;
-   background-color: #3a5856;
-   padding: 0 30px;
-   border-radius: 20px;
-
-}
-
-.but:active {
-   height: 40px;
-   line-height: 40px;
-   display: inline-block;
-   padding: 0 30px;
-   border-radius: 20px;
-   border: solid #818181;
-}
-
-.but-text {
-   font-size: 14px;
-   color: #fff;
-   font-family: Arial, Helvetica, sans-serif;
-   text-transform: uppercase;
-   letter-spacing: 2.8px;
-   padding: 0px 30px 0px 0px;
-   background: url('/img/Shape\ 2.png') right no-repeat;
-
-
-}
-
-.win {
-   margin: 30px 0px 0px 0px;
-   height: 30px;
-   width: 250px;
-}
-
-.win:hover {
-   box-shadow: 0 0 20px 0 rgba(127, 190, 213, 0.93);
-   border: solid 1px #7fbed5;
 }
