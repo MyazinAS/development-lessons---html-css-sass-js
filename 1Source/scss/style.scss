@@ -1,0 +1,116 @@
+@import"../scss/nullstyle.scss";
+
+/*$re - переменная*/
+$re:39px;
+$color_1:rgb(221, 132, 30);
+
+/*%tlpborder - шаблон*/
+%tlpborder {
+   border-bottom: 5px dashed rgb(253, 2, 253);
+   font-size: 70px;
+
+}
+
+%rrr {
+   border-bottom: 5px dashed rgb(28, 228, 95);
+   background-color: rgb(205, 218, 206);
+   font-size: 30px;
+
+}
+
+s body {
+   background-color: #ffffff;
+   padding: $re;
+   font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* 1. Вложенность */
+
+.block_1 {
+   border: 3px solid #000;
+
+   span {
+      font-size: 30px;
+   }
+}
+
+
+/* 2. только к первому элементу */
+.block_2 {
+   >p {
+      color: $color_1;
+   }
+
+   .block2_1 {
+      font-size: 45px;
+
+      span {
+         color: rgb(233, 233, 233)
+      }
+   }
+}
+
+
+.block_3 {
+   >p {
+      color: rgb(41, 90, 129);
+   }
+
+   .block3_2 {
+      font-size: 30px;
+
+      >p {
+         color: greenyellow;
+      }
+
+   }
+}
+
+
+
+.link {
+   font-size: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+
+   /*%tlpborder - применение шаблона*/
+   @extend %tlpborder;
+
+   &:hover {
+      color: rgb(252, 18, 18);
+      font-size: 45px;
+      font-weight: 700;
+   }
+
+   /* Внутри блока обращаемся к ссылке
+ */
+   .block_4 & {
+      color: aqua;
+
+      &:hover {
+         color: rgb(21, 146, 129);
+         font-size: 45px;
+         font-weight: 700;
+      }
+   }
+}
+
+/* переменные*/
+
+.block_5 {
+   border: 3px solid #000;
+   display: inline-block;
+   background: rgb(192, 181, 181);
+
+   span {
+      font-size: 40px;
+      color: rgb(84, 97, 97);
+   }
+
+
+}
+
+.block_6 {
+   @extend %rrr;
+
+}

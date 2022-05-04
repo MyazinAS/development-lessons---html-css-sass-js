@@ -106,32 +106,3 @@ h6 {
 }
 
 /* ............................................................ */
-
-body {
-   background-color: #e8e8e8;
-   padding: 30px;
-   font-family: Arial, Helvetica, sans-serif;
-
-}
-
-.list {
-   font-size: 18px;
-}
-
-
-.list li {
-   margin: 0px 0px 10px 0px;
-   position: relative;
-   padding: 0px 0px 0px 30px;
-}
-
-.list li:before {
-   content: '';
-   width: 25px;
-   height: 20px;
-   position: absolute;
-   top: 2px;
-   left: 0px;
-   background: url("/img/check\ icon.png") 0px 0px no-repeat;
-
-}
