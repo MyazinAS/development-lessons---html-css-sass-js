@@ -1,116 +1,296 @@
 @import"../scss/nullstyle.scss";
 
-/*$re - переменная*/
-$re:39px;
-$color_1:rgb(221, 132, 30);
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
 
-/*%tlpborder - шаблон*/
-%tlpborder {
-   border-bottom: 5px dashed rgb(253, 2, 253);
-   font-size: 70px;
+// 1.- Высота на весь экран 2.- чтобы ничего не вылезло 
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+
+   display: flex;
+   flex-direction: column;
 
 }
 
-%rrr {
-   border-bottom: 5px dashed rgb(28, 228, 95);
-   background-color: rgb(205, 218, 206);
+.content {
+   flex: 1 1 auto;
+}
+
+.hi {
+   background-color: #445162;
+   padding: 50px 0px;
+
+   &_list {
+      font-family: Arial;
+      font-size: 20px;
+      line-height: 36px;
+      font-weight: 400;
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+
+
+   }
+
+   .hi_list li {
+      background: url('/img/check_icon_346.png') 0 10px no-repeat;
+      padding: 0px 0px 0px 36px;
+
+   }
+
+   &__row {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__body {
+      color: #ffffff;
+      padding: 0px 30px 0px 0px;
+   }
+
+   .hi__li-4 {
+      margin: 0px;
+   }
+
+   &__title {
+      font-size: 60px;
+      line-height: 1.2;
+      font-weight: 400;
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+      margin: 0px 0px 40px 0px;
+
+
+   }
+
+   &__img {}
+}
+
+//Ширина контента + выравнивать по центру
+.container {
+   max-width: 1180px;
+   margin: 0px auto;
+}
+
+.footer {
+   background-color: #f5f5f5;
+
+
+   // justify-content - выровнить в центре (горизонт).  align-items - центр по вертикали
+
+   &__row {
+      display: flex;
+      height: 65px;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__text {
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 400;
+      letter-spacing: 0.025em;
+      color: #445162;
+   }
+}
+
+.title {
    font-size: 30px;
-
-}
-
-s body {
-   background-color: #ffffff;
-   padding: $re;
-   font-family: Arial, Helvetica, sans-serif;
-
-}
-
-/* 1. Вложенность */
-
-.block_1 {
-   border: 3px solid #000;
-
-   span {
-      font-size: 30px;
-   }
+   line-height: 36px;
+   color: #445161;
 }
 
 
-/* 2. только к первому элементу */
-.block_2 {
-   >p {
-      color: $color_1;
+
+.what {
+   padding: 50px 0px;
+
+   &_image {
+      flex: 0 0 430px;
    }
 
-   .block2_1 {
-      font-size: 45px;
-
-      span {
-         color: rgb(233, 233, 233)
-      }
-   }
-}
-
-
-.block_3 {
-   >p {
-      color: rgb(41, 90, 129);
+   //обращаемся к картинке, если картинка будет большего размера, то она без труда поместиться в наш блок 
+   &_image img {
+      max-width: 100%;
    }
 
-   .block3_2 {
-      font-size: 30px;
 
-      >p {
-         color: greenyellow;
-      }
 
+   &__row {
+      display: flex;
+   }
+
+   // разрешаем второму блоку с текстом увелич и умень
+   &__body {
+      flex: 1 1 auto;
+      padding: 0px 0px 0px 38px;
+   }
+
+   &__title {
+      margin: 0px 0px 36px 0px;
+
+   }
+
+   &__text {
+
+      font-size: 16px;
+      line-height: 24px;
+      color: #333333;
+   }
+
+   &__text p:nth-child(1) {
+      margin: 0px 0px 25px 0px;
    }
 }
 
 
 
-.link {
-   font-size: 20px;
-   font-family: Arial, Helvetica, sans-serif;
 
-   /*%tlpborder - применение шаблона*/
-   @extend %tlpborder;
 
-   &:hover {
-      color: rgb(252, 18, 18);
-      font-size: 45px;
-      font-weight: 700;
+
+
+// ==========================
+
+.columns {
+   background-color: #f5f5f5;
+
+   &__title {
+      text-align: center;
+      margin: 0px 0px 31px 0px;
    }
 
-   /* Внутри блока обращаемся к ссылке
- */
-   .block_4 & {
-      color: aqua;
+   // Отступ в 16px можно добиться (т.е раздвинуть flex-контейнер) отрицательным margin у каждого блока 8+8=16. 
+   &__row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0px -8px;
+   }
 
-      &:hover {
-         color: rgb(21, 146, 129);
-         font-size: 45px;
-         font-weight: 700;
-      }
+   // а сами колонки мы сдвигаем на 8px 
+   &__column {
+      flex: 0 1 50%;
+      padding: 0px 8px;
+      margin: 0px 0px 30px 0px;
+   }
+
+   &__item {}
+}
+
+.item {
+
+   &__row {
+      display: flex;
+   }
+
+   &__image {
+      flex: 0 0 200px;
+   }
+
+   &__body {
+      padding: 0px 0px 0px 15px;
+      flex: 1 1 auto;
+   }
+
+   &__title {
+      color: #445161;
+      font-size: 24px;
+      margin: 0px 0px 15px 0px;
+   }
+
+   &__text {
+      color: #333333;
+      font-size: 16px;
+      line-height: 24px;
    }
 }
 
-/* переменные*/
 
-.block_5 {
-   border: 3px solid #000;
-   display: inline-block;
-   background: rgb(192, 181, 181);
 
-   span {
+
+
+
+
+
+.vertical {
+   padding: 50px;
+
+   // чтобы сделать отсуп у колонок в основной блок вставляем (через margin) половину зачения (как в макете)+ записываем его как отрицат число,  в саму колонку записываем отступ через padding 
+   &_row {
+      display: flex;
+      margin: 0px -22.5px;
+   }
+
+   // запрет на увел, можно умень , размер 33%
+   //"в саму колонку записываем отступ через padding " По итогу 45px отступ. 
+   &_column {
+      flex: 0 1 33.333%;
+      display: flex;
+      padding: 0px 22.5px;
+
+   }
+
+   &__tetle {}
+
+   &__body {
+      max-width: 990px;
+      margin: 0px auto;
+   }
+
+   &__item {
+      background-color: #445161;
+      color: #ffffff;
+      border-radius: 5px;
+      border: 1px #445161;
+      padding: 0px 0px 20px 0px;
+      display: flex;
+      flex-direction: column;
+
+   }
+
+   &__subtitle {
+      text-align: center;
+      font-size: 24px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding: 12px 0px;
+   }
+
+   &__label {
+      background-color: #ffffff;
+      border: 1px solid #445161;
+      text-align: center;
       font-size: 40px;
-      color: rgb(84, 97, 97);
+      line-height: 30px;
+      color: #445162;
+      padding: 12px 0px;
    }
 
+   &__text {
+      font-size: 14px;
+      line-height: 24px;
+      color: #ffffff;
+      padding: 20px;
+      flex: 1 1 auto;
+   }
 
+   &__btn {
+      display: block;
+      margin: 0px 20px;
+      height: 40px;
+      background-color: #ffffff;
+      text-align: center;
+      font-size: 18px;
+      line-height: 40 px;
+      border-radius: 5px;
+      color: #445161;
+      padding: 10px;
+   }
 }
 
-.block_6 {
-   @extend %rrr;
+.containner {}
 
+.title {
+   text-align: center;
+   margin: 0px 0px 30px 0px;
 }
